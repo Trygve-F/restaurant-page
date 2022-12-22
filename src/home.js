@@ -1,3 +1,5 @@
+import './style.css';
+
 const home = () => {
     const content = document.getElementById('content');
 
@@ -17,10 +19,6 @@ const home = () => {
      good clean health inspection 12/22 real tasty trust us\
     Gordon Ramsay said we best';
     content.appendChild(copy);
-
-    const image = document.createElement('img');
-    image.src = './rest-img.jpg';
-    content.appendChild(image)
-    };
+}
 
 export default home
