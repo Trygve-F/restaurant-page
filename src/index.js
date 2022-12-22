@@ -7,21 +7,51 @@ const createNav = () => {
     const content = document.getElementById('content');
 
     const homeButton = document.createElement('button');
-    //homeButton.onclick =
+    homeButton.addEventListener('click', loadHome)
     homeButton.textContent = 'Home';
-    content.appendChild(homeButton)
+    homeButton.id = 'homeButton';
+    content.appendChild(homeButton);
 
     const menuButton = document.createElement('button');
-    //menuButton.onclick =
+    menuButton.addEventListener('click', loadMenu);
     menuButton.textContent = 'Menu';
+    menuButton.id = 'menuButton'
     content.appendChild(menuButton);
 
     const contactButton = document.createElement('button');
-    //contactButton.onclick =  
+    contactButton.addEventListener('click', loadContact);
     contactButton.textContent = 'Contact';
+    contactButton.id = 'contactButton'
     content.appendChild(contactButton)
 }
 
+const loadHome = () => {
+    clearDom();
+    home();
+    createNav();
+}
+
+const loadMenu = () => {
+    clearDom();
+    menu();
+    createNav();
+}
+
+const loadContact = () => {
+    clearDom();
+    contact();
+    createNav();
+}
+    
+
+
+const clearDom = () => {
+    const content = document.getElementById('content')
+
+    while(content.firstChild) {
+        content.removeChild(content.firstChild)
+    }
+}
 
 
 home();
