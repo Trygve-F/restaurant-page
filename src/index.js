@@ -6,6 +6,11 @@ import menu from './menu';
 const createNav = () => {
     const content = document.getElementById('content');
 
+    const name = document.createElement('div');
+    name.id = 'homeName';
+    name.textContent = "Meathaus";
+    content.appendChild(name);
+
     const homeButton = document.createElement('button');
     homeButton.addEventListener('click', loadHome)
     homeButton.textContent = 'Home';
@@ -16,6 +21,7 @@ const createNav = () => {
     menuButton.addEventListener('click', loadMenu);
     menuButton.textContent = 'Menu';
     menuButton.id = 'menuButton'
+
     content.appendChild(menuButton);
 
     const contactButton = document.createElement('button');
@@ -43,7 +49,6 @@ const loadContact = () => {
     createNav();
 }
     
-
 
 const clearDom = () => {
     const content = document.getElementById('content')

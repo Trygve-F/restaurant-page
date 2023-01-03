@@ -1,19 +1,47 @@
+html,
 body {
+    margin: auto;
     background-image: url('../dist/rest-img.jpg');
     background-repeat: no-repeat;
-    background-size: 100%, auto;
+    background-size: contain;
+    background-position: right;
+    background-attachment:fixed ;
+    width: 100vw;
+    height: 100vh;
 }
 
 #content {
     display: flex;
-    flex-direction: column;
+    justify-items: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
 }
 
-#name {
-    flex: 1;
-    color: red;
-    font-size: 100px
+button {
+width: 100px;
+height: 50px;
 }
+
+#homeName {
+    color: red;
+    font-size: 100px;
+    order: 1;
+}
+
+#menu {
+    order: 2;
+}
+
+#homeHeader {
+    
+}
+
+#homeCopy {
+   
+}
+
+
+
 
 #header {
     color: black;
