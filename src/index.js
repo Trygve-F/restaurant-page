@@ -6,29 +6,33 @@ import menu from './menu';
 const createNav = () => {
     const content = document.getElementById('content');
 
+    const navBar = document.createElement('div');
+    navBar.id = ('navBar');
+    content.appendChild(navBar);
+
     const name = document.createElement('div');
     name.id = 'homeName';
     name.textContent = "Meathaus";
-    content.appendChild(name);
+    navBar.appendChild(name);
 
     const homeButton = document.createElement('button');
     homeButton.addEventListener('click', loadHome)
     homeButton.textContent = 'Home';
     homeButton.id = 'homeButton';
-    content.appendChild(homeButton);
+    navBar.appendChild(homeButton);
 
     const menuButton = document.createElement('button');
     menuButton.addEventListener('click', loadMenu);
     menuButton.textContent = 'Menu';
     menuButton.id = 'menuButton'
 
-    content.appendChild(menuButton);
+    navBar.appendChild(menuButton);
 
     const contactButton = document.createElement('button');
     contactButton.addEventListener('click', loadContact);
     contactButton.textContent = 'Contact';
     contactButton.id = 'contactButton'
-    content.appendChild(contactButton)
+    navBar.appendChild(contactButton)
 }
 
 const loadHome = () => {
